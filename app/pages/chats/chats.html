@@ -14,5 +14,14 @@
 
 
 <ion-content padding>
-
+  <ion-list-header>Today</ion-list-header>
+  <ion-list *ngFor="let message of conversation.messages">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="" />
+      </ion-avatar>
+      <h2></h2>
+      <p></p>
+    </ion-item>
+  </ion-list>
 </ion-content>

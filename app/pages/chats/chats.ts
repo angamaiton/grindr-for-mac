@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Conversation } from '../../models/conversation/conversation';
+import { ChatsService } from './chats.service';
 
 /*
   Generated class for the ChatsPage page.
@@ -9,10 +11,39 @@ import { NavController } from 'ionic-angular';
 */
 @Component({
   templateUrl: 'build/pages/chats/chats.html',
+  providers: [ChatsService]
 })
 export class ChatsPage {
 
-  constructor(private navCtrl: NavController) {
+  chats: Array<any>;
+
+  constructor(private navCtrl: NavController, chatsService: ChatsService, private conversation: Conversation ) {
+    this.conversation = conversation;
+    this.chats = conversation.messages;
+  }
+
+  openChat(id: string) {
+
+  }
+  sendText() {
+
+  }
+  showSentImages() {
+
+  }
+  clearSentImages() {
+
+  }
+  sendImage() {
+
+  }
+  sendLocation() {
+
+  }
+  block() {
+
+  }
+  deleteChat() {
 
   }
 
